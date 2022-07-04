@@ -93,7 +93,7 @@ router.delete("/:id", (req, res) => {
         res.status(404).json({ message: "unable to find category" });
         return;
       }
-      res.json(dbCategoryData);
+      res.json({ message: "category deleted" });
     })
     .catch((err) => {
       console.log(err);
